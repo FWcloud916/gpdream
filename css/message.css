@@ -1,0 +1,67 @@
+body{
+	margin:0 auto;
+}
+textarea{
+	resize : none;
+	width: 95%;
+	border-width: 2px;
+	border-color: black;
+	border-style: solid;
+
+}
+.messagecontainer{
+	height:21em;
+	text-align: center;
+	overflow-y: auto;
+}
+.messagebox{
+	width: 75%;
+	margin:0 auto;
+	margin-top: -30px;
+	overflow: hidden;
+	display: block;
+	text-align: left;
+}
+
+.messagebox input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    text-align: center;
+}
+
+#scrollbar::-webkit-scrollbar-track
+{	
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#scrollbar::-webkit-scrollbar
+{	
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+#scrollbar::-webkit-scrollbar-thumb
+{
+	background-color: #FFFFFF;
+	border: 2px solid #F5F5F5;
+}
+/*
+.messagebox h4{
+	text-align: center;
+}
+*/
+#time{
+	font-size: 0.5em;
+	font-weight: bold;
+	font-style: italic;
+	text-align: right;
+	margin-right: 1em;
+}
+.center{
+	text-align:center;
+}

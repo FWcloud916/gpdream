@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+@media screen and (max-width:480px) {
+
+  #animate{
+    width: 100%;
+  }
+  h1{
+    font-size:8vw;
+    font-family:Microsoft JhengHei;
+
+  }
+  p{
+    font-size: 20px;
+    font-family:Microsoft JhengHei;
+  }
+  h2{
+    font-family:Microsoft JhengHei;
+  }
+  img{
+    width:100%;
+
+  }
+  .tabpanel ul {
+    display: table;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .tabpanel li {
+    display: table-cell;
+    background: #e0f2f1;
+    font-size: 9vw;
+  }
+  .tabpanel li.is-active {
+    background: #4db6ac;
+  }
+  .tabpanel div:nth-of-type(n+2) {
+    display: none;
+  }
+
+  .theme-tabpanel li {
+    text-align: center;
+    display: block;
+    color: #FFF;
+    padding: 5vw;
+    text-decoration: none;
+  }
+  .theme-tabpanel div {
+    font-size: 6vw;
+    line-height: 5vh;
+    padding: 5vw;
+    background: #eceff1;
+    overflow: hidden;
+  }
+  .theme-tabpanel div h1 {
+    margin: 10% 30% 10% 30%;
+    text-align: center;
+  }
+  .theme-tabpanel div p {
+    overflow: hidden;
+  }
+
+}

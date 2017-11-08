@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+@media screen and (max-width:480px) {
+  body {
+    background: url(../images/BG1.jpg);
+    font-family: Microsoft JhengHei;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+  }
+  #mid-conent{
+    text-align:center;width:60%;margin:0 auto;position: relative;
+  }
+  h1{
+    font-size: 12vw;
+    font-family:Microsoft JhengHei;
+
+  }
+  p{
+    font-size:5vw;
+    font-family:Microsoft JhengHei;
+
+  }
+  .circle-nav ul {
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: -1vh;
+    margin-left: -11vw;
+  }
+  .circle-nav li {
+    width: 22vw;
+    height: 22vw;
+    line-height: 22vw;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    -moz-transition: all 0.5s 0;
+    -o-transition: all 0.5s 0;
+    -webkit-transition: all 0.5s 0;
+    transition: all 0.5s 0;
+  }
+  .circle-nav li:nth-child(1) {
+    -moz-transform: translate(150%, 0);
+    -ms-transform: translate(150%, 0);
+    -webkit-transform: translate(150%, 0);
+    transform: translate(150%, 0);
+  }
+  .circle-nav li:nth-child(2) {
+    -moz-transform: translate(0, 150%);
+    -ms-transform: translate(0, 150%);
+    -webkit-transform: translate(0, 150%);
+    transform: translate(0, 150%);
+  }
+  .circle-nav li:nth-child(3) {
+    -moz-transform: translate(-150%, 0);
+    -ms-transform: translate(-150%, 0);
+    -webkit-transform: translate(-150%, 0);
+    transform: translate(-150%, 0);
+  }
+  .circle-nav li:nth-child(4) {
+    -moz-transform: translate(0, -150%);
+    -ms-transform: translate(0, -150%);
+    -webkit-transform: translate(0, -150%);
+    transform: translate(0, -150%);
+  }
+
+  .open-circle {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  .open-circle span {
+    width: 26vw;
+    height: 26vw;
+    line-height: 26vw;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    position: relative;
+    z-index: 10;
+  }
+
+  /* theme-circle-nav */
+  .theme-circle-nav {
+    text-align: center;
+    padding-top:80%;
+    position: relative;
+  }
+  .theme-circle-nav li {
+    color: #fff;
+    display: inline-block;
+    font-size: 5vw;
+    background: #f36c60;
+  }
+  .theme-circle-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-family: Microsoft JhengHei;
+  }
+  .theme-circle-nav .open-circle span {
+    color: #fff;
+    display: inline-block;
+    font-size: 6vw;
+    font-weight: bold;
+    background: #dd191d;
+  }
+}

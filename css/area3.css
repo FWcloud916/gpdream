@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+@media screen and (max-width:480px) {
+
+  body {
+    background: url(../images/BG1.jpg);
+    font-family: Verdana,sans-serif,Microsoft JhengHei;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+  }
+  #header{
+    width:75%;text-align: center;margin: 0 auto;
+  }
+  h1{
+    font-size: 10vw;
+    font-family:Microsoft JhengHei;
+    /*padding:5% 0 0 0;*/
+
+  }
+  .card:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+  }
+  .card .box {
+    float: left;
+    width: 45%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .card .box img {
+    width:40vw;
+    height:30vh;
+  }
+
+  /* theme-card */
+  .theme-card .box {
+    width: 45%;
+    margin-left: 5%;
+  }
+
+  .theme-card .title {
+    color: #212121;
+    font-family:Microsoft JhengHei;
+    font-size: 5vw;
+    overflow : hidden;
+    text-overflow : ellipsis;
+    white-space : nowrap;
+  }
+
+}

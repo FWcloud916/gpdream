@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+@media screen and (max-width:480px) {
+  body {
+    background: url(../images/BG1.jpg);
+    font-family: Verdana,sans-serif,Microsoft JhengHei;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+  }
+  #header{
+    width:75%;text-align: center;margin: 0 auto;
+  }
+  h1{
+    font-size: 8vw;
+    font-family:Microsoft JhengHei;
+    color: #dddddd;
+    margin:0;
+    margin-left:3vw;
+    margin-right:3vw;
+
+  }
+  p{
+    font-size: 6vw;
+    margin: 0;
+    font-family:Microsoft JhengHei;
+    color: #dddddd;
+    margin-left:8vw;
+    margin-right:8vw;
+    padding-bottom: 2vh;
+  }
+}

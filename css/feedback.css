@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 480px) {
+  body {
+    background: url(../images/BG1.jpg);
+    font-family: Verdana,sans-serif,Microsoft JhengHei;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+  }
+  #header{
+    width:100%;margin:0 auto;text-align: center;
+    border-bottom:3px solid #c2eac7;
+  }
+  h1{
+    font-size: 10vw;
+    font-family:Microsoft JhengHei;
+  }
+  p{
+    font-size: 4vw;
+    font-family:Microsoft JhengHei;
+    color:#8e8a8a;
+  }
+  h2{
+    font-size: 6vw;
+    font-family:Microsoft JhengHei;
+  }
+
+  #ul-answer { list-style-type: none;margin-right: 10%;}
+  #li-answer { display: inline-block;margin: 2vh 0;}
+  input.labelauty + label { font: 12px "Microsoft Yahei";}
+
+
+  input.labelauty + label ::selection { background-color: rgba(255, 255, 255, 0); }
+  input.labelauty + label ::-moz-selection { background-color: rgba(255, 255, 255, 0); }
+
+  input.labelauty + label /*按鈕前樣式*/
+  {
+    display: table;
+    font-size: 5vw;
+    padding: 3vw;
+    background-color: #efefef;
+    color: #515050;
+    cursor: pointer;
+
+    border-radius: 2vw 2vw 2vw 2vw;
+    -moz-border-radius: 2vw 2vw 2vw 2vw;
+    -webkit-border-radius: 2vw 2vw 2vw 2vw;
+
+
+    transition: background-color 0.25s;
+    -moz-transition: background-color 0.25s;
+    -webkit-transition: background-color 0.25s;
+    -o-transition: background-color 0.25s;
+
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+  }
+
+  input.labelauty + label > span.labelauty-unchecked,
+  input.labelauty + label > span.labelauty-checked
+  {
+    display: inline-block;
+    line-height: 3vh;
+    vertical-align: bottom;
+  }
+
+
+  input.labelauty + label > span.labelauty-unchecked-image,
+  input.labelauty + label > span.labelauty-checked-image
+  {
+    display: inline-block;
+    width: 5vw;
+    height: 5vw;
+    vertical-align: bottom;
+    background-repeat: no-repeat;
+    background-position: left center;
+
+    transition: background-image 0.5s linear;
+    -moz-transition: background-image 0.5s linear;
+    -webkit-transition: background-image 0.5s linear;
+    -o-transition: background-image 0.5s linear;
+  }
+  input.labelauty + label > span.labelauty-unchecked-image + span.labelauty-unchecked,
+  input.labelauty + label > span.labelauty-checked-image + span.labelauty-checked
+  {
+    margin-left: 2vw;
+  }
+
+  input.labelauty:not(:checked):not([disabled]) + label:hover
+  {
+    background-color: #f4b049;
+    color: #ffffff;
+  }
+  input.labelauty:not(:checked) + label > span.labelauty-checked-image
+  {
+    display: none;
+  }
+
+  input.labelauty:not(:checked) + label > span.labelauty-checked
+  {
+    display: none;
+  }
+
+  input.labelauty:checked + label
+  {
+    background-color: #f4b049;
+    color: #ffffff;
+  }
+
+  input.labelauty:checked:not([disabled]) + label:hover
+  {
+    background-color: #f4b049;
+  }
+  input.labelauty:checked + label > span.labelauty-unchecked-image
+  {
+    display: none;
+  }
+
+  input.labelauty:checked + label > span.labelauty-unchecked
+  {
+    display: none;
+  }
+
+  input.labelauty:checked + label > span.labelauty-checked
+  {
+    display: inline-block;
+  }
+
+  input.labelauty.no-label:checked + label > span.labelauty-checked
+  {
+    display: block;
+  }
+
+  input.labelauty[disabled] + label
+  {
+    opacity: 0.5;
+  }
+
+  input.labelauty + label > span.labelauty-unchecked-image
+  {
+    background-image: url( ../images/input-unchecked.png );
+  }
+
+  input.labelauty + label > span.labelauty-checked-image
+  {
+    background-image: url( ../images/input-checked.png );
+  }
+  .text-field {
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 80%;
+    border: 1vw solid #999897;
+    border-radius: 2vw;
+    margin: 0 auto;
+    background-color: #fafafa;
+    font-size: 5vw;
+  }
+  .text-field:focus {
+    background-color: #fff;
+  }
+  .form-submit {
+    -webkit-appearance: none;
+    appearance: none;
+    display: block;
+    width: 50%;
+    margin:1em auto 0 auto;
+    border:3px solid #ffffff;
+    border-radius: 1vw;
+    padding: 5vw;
+    background-color:rgb(252, 179, 83);
+    font-size: 8vw;
+    text-align: center;
+    color: #fafafa;
+  }
+}
