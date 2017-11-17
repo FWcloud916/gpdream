@@ -19,21 +19,20 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
-  <img src="images/BG1.jpg" class="bg">
-  <div id="page-wrap">
+  <div id="bgpic">
     <div id="mid-conent">
       <br>
         <h1>綠色之夢</h1>
         <p>當代臺灣自然書寫特展</p>
         <div id="circle">
             <nav class="circle-nav theme-circle-nav">
-              <!-- <ul>
+              <ul>
                 <li><a href="area1.php">展區介紹</a></li>
                 <li><a href="#">平面圖</a></li>
                 <li><a href="#">數據分析</a></li>
                 <li><a href="#">路線分析</a></li>
-              </ul> -->
-              <p class="open-circle"><span><a href="introduce.php">click</a></span></p>
+              </ul>
+              <p class="open-circle"><span>click</span></p>
             </nav>
         </div>
       </div>

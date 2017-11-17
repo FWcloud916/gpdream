@@ -20,33 +20,32 @@
 
 </head>
 <body>
-    <img src="images/BG1.jpg" class="bg">
-    <div id="page-wrap">
-      <nav id="menu" class="left">
-          <ul>
-            <li><a href="index.php"><i class="fa fa-hoff-canvas Sime"></i>首頁</a></li>
-
-            <li>
-                <a href="#"><i class="fa fa-laptop"></i>展區介紹<i class="fa fa-caret-down"></i></a>
+    <div>
+              <nav id="menu" class="left">
                 <ul>
-                    <li><a href="area1.php">我們只有一個地球</a></li>
-                    <li><a href="area2.php">尋找X點</a></li>
-                    <li><a href="area3.php">書寫自然</a></li>
-                    <li>
-                        <a href="#"><i class="fa fa-tree"></i>綠色行動<i class="fa fa-caret-down"></i></a>
-                        <ul>
-                          <li><a href="message.php">綠色行動</a></li>
-                          <li><a href="message_show.php">綠色樹</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="feedback.php"><i class="fa fa-info-circle"></i>意見回饋</a></li>
-            <li><a href="about.php"><i class="fa fa-users"></i>聯絡資訊</a></li>
-           </ul>
+                  <li><a href="index.php"><i class="fa fa-hoff-canvas Sime"></i>首頁</a></li>
 
-          <a href="#" id="showmenu"> <i class="fa fa-bars fa-1x"></i> </a> <!--選單按鈕-->
-      </nav>
+                  <li>
+                      <a href="#"><i class="fa fa-laptop"></i>展區介紹<i class="fa fa-caret-down"></i></a>
+                      <ul>
+                          <li><a href="area1.php">我們只有一個地球</a></li>
+                          <li><a href="area2-1.php">尋找x點</a></li>
+                          <li><a href="area3.php">書寫自然</a></li>
+                          <li><a href="area4.php">行動歌詩</a></li>
+                          <li>
+                <a href="#"><i class="fa fa-tree"></i>綠色行動<i class="fa fa-caret-down"></i></a>
+                <ul>
+                  <li><a href="message.php">綠色行動</a></li>
+                  <li><a href="message_show.php">綠色樹</a></li>
+                </ul>
+              </li>
+                      </ul>
+                  </li>
+                  <li><a href="feedback.php"><i class="fa fa-info-circle"></i>意見回饋</a></li>
+              </ul>
+
+                <a href="#" id="showmenu"> <i class="fa fa-bars fa-1x"></i> </a> <!--選單按鈕-->
+              </nav>
               <div id="header">
                  <h1>有話想說?</h1>
                  <p>對於此展覽有沒有想對我們說的話呀?<br>讓我們知道您對此展覽的感想吧~~</p>
@@ -64,7 +63,7 @@
                     <li id="li-answer"><input type="radio" name="area" data-labelauty="我們只有一個地球" value="我們只有一個地球"></li>
                     <li id="li-answer"><input type="radio" name="area" data-labelauty="尋找X點" value="尋找X點"></li>
                     <li id="li-answer"><input type="radio" name="area" data-labelauty="書寫自然" value="書寫自然"></li>
-                    <li id="li-answer"><input type="radio" name="area" data-labelauty="綠色行動" value="綠色行動"></li>
+                    <li id="li-answer"><input type="radio" name="area" data-labelauty="國光石化" value="國光石化"></li>
                   </ul>
                   <h2>您滿意此次《綠色之夢》展覽嗎?</h2>
                   <ul id="ul-answer">

@@ -20,59 +20,60 @@
   <link rel="stylesheet" href="css/area1.css">
 </head>
 <body>
-    <img src="images/BG1.jpg" class="bg">
-    <div  id="page-wrap">
+    
                 <nav id="menu" class="left">
-                    <ul>
-                      <li><a href="index.php"><i class="fa fa-hoff-canvas Sime"></i>首頁</a></li>
+                  <ul>
+                    <li><a href="index.php"><i class="fa fa-hoff-canvas Sime"></i>首頁</a></li>
 
-                      <li>
-                          <a href="#"><i class="fa fa-laptop"></i>展區介紹<i class="fa fa-caret-down"></i></a>
-                          <ul>
-                              <li><a href="area1.php">我們只有一個地球</a></li>
-                              <li><a href="area2.php">尋找X點</a></li>
-                              <li><a href="area3.php">書寫自然</a></li>
-                              <li><a href="#"><i class="fa fa-tree"></i>綠色行動<i class="fa fa-caret-down"></i></a>
-				                <ul>
-				                  <li><a href="message.php">綠色行動</a></li>
-				                  <li><a href="message_show.php">綠色樹</a></li>
-				                </ul>
-				              </li>
-                          </ul>
-                      </li>
-                      <li><a href="feedback.php"><i class="fa fa-info-circle"></i>意見回饋</a></li>
-                      <li><a href="about.php"><i class="fa fa-users"></i>聯絡資訊</a></li>
-                     </ul>
+                    <li>
+                        <a href="#"><i class="fa fa-laptop"></i>展區介紹<i class="fa fa-caret-down"></i></a>
+                        <ul>
+                            <li><a href="area1.php">我們只有一個地球</a></li>
+                            <li><a href="area2-1.php">尋找x點</a></li>
+                            <li><a href="area3.php">書寫自然</a></li>
+                            <li><a href="area4.php">行動歌詩</a></li>
+                            <li>
+                <a href="#"><i class="fa fa-tree"></i>綠色行動<i class="fa fa-caret-down"></i></a>
+                <ul>
+                  <li><a href="message.php">綠色行動</a></li>
+                  <li><a href="message_show.php">綠色樹</a></li>
+                </ul>
+              </li>
+                        </ul>
+                    </li>
+                    <li><a href="feedback.php"><i class="fa fa-info-circle"></i>意見回饋</a></li>
+                </ul>
 
-                    <a href="#" id="showmenu"> <i class="fa fa-bars fa-1x"></i> </a> <!--選單按鈕-->
+                  <a href="#" id="showmenu"> <i class="fa fa-bars fa-1x"></i> </a> <!--選單按鈕-->
                 </nav>
 
-                <div  id="music">
+
+                <div  style="width:10%;float:right;margin-right:2vw;">
                   <audio id="music2" src="music/one.mp3"  loop="loop">不支持瀏覽器</audio>
-                  <a href="javascript:playPause();"><img src="images/firstmusic.png" width="40" height="40" id="music_btn2"></a>
+                  <a href="javascript:playPause();"><img src="images/speaker.png" width="40" height="40" id="music_btn2"></a>
                 </div>
                 <div id="header">
                  <h1 style="margin-bottom:0;">我們</h1>
                  <h1 style="margin-top:0;">只有一個地球</h1>
                 </div>
-                <div style="margin-top:15vw;">
-                  <div id="theme" style="background-color:#EF8895;" onclick="location.href='area1-1.php';">
-                    <img src="images/area1-1.png">
-                    <h2>台灣適不適核?</h2>
+                <div>
+                  <div style="width:100%;background-color:#EF8895;height:12vh;line-height:12vh;" onclick="location.href='area1-1.php';">
+                    <img src="images/area1-1.png" style="height:100%;float:left;margin-left:2%;">
+                    <h2 style="margin:0;font-family:Microsoft JhengHei;font-size:3.5vh;">台灣適不適核?</h2>
                   </div>
-                  <div id="theme" style="background-color:#F7E98B;" onclick="location.href='area1-2.php';">
-                    <img src="images/area1-2.png">
-                     <h2>台灣快變垃圾島?</h2>
+                  <div style="width:100%;background-color:#F7E98B;height:12vh;line-height:12vh;" onclick="location.href='area1-2.php';">
+                    <img src="images/area1-2.png" style="height:100%;float:left;margin-left:2%;">
+                     <h2 style="margin:0;font-family:Microsoft JhengHei;font-size:3.5vh;">台灣快變垃圾島?</h2>
                   </div>
-                  <div id="theme" style="background-color:#F2913A;" onclick="location.href='area1-3.php';">
-                    <img src="images/area1-3.png">
-                    <h2>天燈該不該放?</h2>
+                  <div style="width:100%;background-color:#F2913A;height:12vh;line-height:12vh;" onclick="location.href='area1-3.php';">
+                    <img src="images/area1-3.png" style="height:100%;float:left;margin-left:2%;">
+                    <h2 style="margin:0;font-family:Microsoft JhengHei;font-size:3.5vh;">天燈該不該放?</h2>
                   </div>
-                  <div id="theme" style="background-color:#A0D7E1;" onclick="location.href='area1-4.php';">
-                    <img src="images/area1-4.png">
-                    <h2>你呼吸的是甚麼空氣?</h2>
+                  <div style="width:100%;background-color:#A0D7E1;height:12vh;line-height:12vh;" onclick="location.href='area1-4.php';">
+                    <img src="images/area1-4.png" style="height:100%;float:left;margin-left:2%;">
+                    <h2 style="margin:0;font-family:Microsoft JhengHei;font-size:3.5vh;">你呼吸的是甚麼空氣?</h2>
                   </div>
-      </div>
+                </div>
 </body>
 <script src="js/jquery-2.1.1.min.js"></script>
 <script>

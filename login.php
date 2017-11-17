@@ -22,14 +22,14 @@
       elseif ($position == "a14") {
         $page = "area1-4.php?come=1";
       }
-      elseif ($position == "a2") {
-        $page = "area2.php?come=1";
+      elseif ($position == "a21") {
+        $page = "area2-1.php?come=1";
       }
-      elseif ($position == "a31") {
-        $page = "area3-1.php?come=1";
+      elseif ($position == "a3") {
+        $page = "area3.php?come=1";
       }
-      elseif ($position == "a32") {
-        $page = "area3-2.php?come=1";
+      elseif ($position == "a4") {
+        $page = "area4.php?come=1";
       }
       elseif ($position == "fb") {
         $page = "feedback.php?come=1";
