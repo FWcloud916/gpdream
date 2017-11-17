@@ -1,115 +1,258 @@
 <?php
-  if(!isset($_SESSION)) 
-  { 
-      session_start(); 
-  }
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }
+    header("Content-Type: text/html; charset=utf-8");
+    require_once("connMysql.php");
+    $_POST['position'] = "選讀自然";
+    include_once("locaction.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, minimal-ui initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <title>黑熊手記：我與台灣黑熊的故事</title>
-  <!-- Add jQuery library -->
-  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-
-  <!-- Add mousewheel plugin (this is optional) -->
-  <script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
-
-  <!-- Add fancyBox -->
-  <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.7" type="text/css" media="screen" />
-  <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.7"></script>
-
-  <!-- Optionally add helpers - button, thumbnail and/or media -->
-  <link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
-  <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-  <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-
-  <link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
-  <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
-
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $(".fancybox").fancybox();
-    });
-  </script>
-
+  <title>選讀自然</title>
   <link rel="stylesheet" href="css/font-awesome.min.css"><!--fonticon-->
-  <link rel="stylesheet" href="css/area3-1.css">
   <link rel="stylesheet" href="css/dropmenu.css">
+  <link rel="stylesheet" href="css/area3(1).css">
 </head>
 <body>
-    <div>
+    <img src="images/BG1.jpg" class="bg">
+    <div id="page-wrap">
               <nav id="menu" class="left">
-                <ul>
-                  <li><a href="index.php"><i class="fa fa-hoff-canvas Sime"></i>首頁</a></li>
+                  <ul>
+                    <li><a href="index.php"><i class="fa fa-hoff-canvas Sime"></i>首頁</a></li>
 
-                  <li>
-                      <a href="#"><i class="fa fa-laptop"></i>展區介紹<i class="fa fa-caret-down"></i></a>
-                      <ul>
-                          <li><a href="area1.php">我們只有一個地球</a></li>
-                          <li><a href="area2-1.php">尋找x點</a></li>
-                          <li><a href="area3.php">書寫自然</a></li>
-                          <li><a href="area4.php">行動歌詩</a></li>
-                          <li>
-                <a href="#"><i class="fa fa-tree"></i>綠色行動<i class="fa fa-caret-down"></i></a>
-                <ul>
-                  <li><a href="message.php">綠色行動</a></li>
-                  <li><a href="message_show.php">綠色樹</a></li>
-                </ul>
-              </li>
-                      </ul>
-                  </li>
-                  <li><a href="feedback.php"><i class="fa fa-info-circle"></i>意見回饋</a></li>
-              </ul>
+                    <li>
+                        <a href="#"><i class="fa fa-laptop"></i>展區介紹<i class="fa fa-caret-down"></i></a>
+                        <ul>
+                            <li><a href="area1.php">我們只有一個地球</a></li>
+                            <li><a href="area2.php">尋找X點</a></li>
+                            <li><a href="area3.php">書寫自然</a></li>
+                            <li><a href="#"><i class="fa fa-tree"></i>綠色行動<i class="fa fa-caret-down"></i></a>
+	                            <ul>
+	                              <li><a href="message.php">綠色行動</a></li>
+	                              <li><a href="message_show.php">綠色樹</a></li>
+	                            </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="feedback.php"><i class="fa fa-info-circle"></i>意見回饋</a></li>
+                    <li><a href="about.php"><i class="fa fa-users"></i>聯絡資訊</a></li>
+                   </ul>
 
-                <a href="#" id="showmenu"> <i class="fa fa-bars fa-1x"></i> </a> <!--選單按鈕-->
+                  <a href="#" id="showmenu"> <i class="fa fa-bars fa-1x"></i> </a> <!--選單按鈕-->
               </nav>
 
+                <div id="header">
+                   <h1>選讀自然</h1>
+                </div>
 
-              <div style="width:100%;height:50vh;text-align:center;margin-top:5vh;">
-                    <a class="fancybox" rel="group" href="images/book1.png" ><img src="images/book1.png" style="height:100%;"></a>
-              </div>
-              <div style="background-color:rgba(0,0,0,0.5);width:100%;margin-top:8vh;">
-                <br>
-                  <h1>《黑熊手記：我與台灣黑熊的故事》</h1>
-                  <br>
-              </div>
-              <div style="background-color:rgba(0,0,0,0.5);width:100%;">
-                <br><br>
-                  <p style="margin-left:5vw;font-weight:bold;">黃美秀</p>
-              </div>
-              <div style="background-color:rgba(0,0,0,0.5);width:100%;">
-                <br><br>
-                  <p>這是一本有關台灣深山、黑熊、布農原住民文化，以及野外研究者心路歷程的故事。書的內容主要摘選自作者從事野外黑熊研究的三年期間
-，十本洋洋灑灑的野外記錄手記。在成書的過程中，以具有個人重要啟示及故事性，忠實地呈現手記中的情境及當下的心情點滴為原則，並提供讀者一些額外的重要資訊，尤其是對研究方法、黑熊習性、原住民文化等方面的認識。</p>
-              </div>
-              <div style="background-color:rgba(0,0,0,0.5);width:100%;">
-                <br><br>
-                  <p>本書也是台灣第一本出版的本土生態研究札記，尤其是因本地獨特的地理及生態環境特色，而孕育出的台灣經驗。在這份手記中，我們看到一位年輕女子為了研究的堅持，絞盡腦汁與自然鬥智、和台灣黑熊捉迷藏;中間慘雜著台灣群山萬壑人煙罕至的景致描繪、令人驚豔的動物與植物、原住民的傳統文化、大自然的種種野趣，以及作者在山中的簡單生活中，找到淨化心靈的偉大力量。</p>
-              </div>
-              <div style="background-color:rgba(0,0,0,0.5);width:100%;">
-                <br><br>
-                  <p>也希望本書的出版能拋縛引玉，讓更多的深山生態及黑熊的研究著根──更多研究者及單位的參與，政府的重視.社會的支持。進而期望國人對台灣深山這後花園的蠻荒原始與寶貴，以及瀕危的台灣黑熊多一分認識，對我們共同生長的這片土地多一分疼惜。</p>
-              </div>
-              <div style="background-color:rgba(0,0,0,0.5);width:100%;">
-                <br><br>
-                  <p>藉由彩色圖鑑，首先介紹全世界的八種熊類(美洲黑熊、北極熊、棕熊、亞洲黑熊、馬來熊、懶熊、貓熊、眼鏡熊)，接著詳細介紹瀕臨滅絕的台灣特有物種「台灣黑熊」的外型特徵、食性、生育、生態習性、熊的研究方法，以及與人類的關係等等，讓請者能一目暸然台灣黑熊的所有相關知識與資料。</p>
-              </div>
-              <div style="background-color:rgba(0,0,0,0.5);width:100%;">
-                  <br>  <br>
-                  <p style="font-size:7vw;font-weight:bold;">作者介紹</p>
-              </div>
-              <div style="background-color:rgba(0,0,0,0.5);width:100%;margin-bottom:8vh;">
-                <br><br>
-                  <p>黃美秀，台灣師範大學生物系、台灣大學動物學研究所碩士，目前為美國明尼蘇達大學生物保育研究所博士候選人。她是第一位實地深入觀察台灣黑熊生態的研究者，從一九九八年七月開始至二○○○年十二月，兩年多之間，超過一年半以上的時間在山中與黑熊為伍，研究台灣瀕臨滅絕的物種，台灣媒體爭相報導，並讚礜她為「台灣的珍．古德」。原住民則習慣稱她為「熊媽媽」。</p>
-              </div>
+                <div class="card theme-card">
+                  <div class="box">
+                      <a href="books/book1.php"><img src="images/book1.png" class="image1"></a>
+                      <div class="middle"></div>
+                      <div class="inner">
+                        <div>
+                          <p class="title">《黑熊手記：我與台灣黑熊的故事》</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="box">
+                    <a href="books/book2.php"><img src="images/book2.png" class="image1"></a>
+                      <div class="inner">
+                        <div>
+                          <p class="title">《野狗之丘》</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="box">
+                    <a href="books/book3.php"><img src="images/book3.png" class="image1"></a>
+                      <div class="inner">
+                        <div>
+                          <p class="title">《南風》</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="box">
+                    <a href="books/book4.php"><img src="images/book4.png" class="image1"></a>
+                      <div class="inner">
+                        <div>
+                          <p class="title">《蝶道》</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="box">
+                    <a href="books/book5.php"><img src="images/book5.png" class="image1"></a>
+                      <div class="inner">
+                        <div>
+                          <p class="title">《冷海情深》</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="box">
+                    <a href="books/book6.php"><img src="images/book6.png" class="image1"></a>
+                      <div class="inner">
+                        <div>
+                          <p class="title">《濕地 石化 島嶼想像》</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="box">
+                    <a href="books/book7.php"><img src="images/book7.png" class="image1"></a>
+                      <div class="inner">
+                        <div>
+                          <p class="title">《南臺灣綠色革命》</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="box">
+                    <a href="books/book8.php"><img src="images/book8.png" class="image1"></a>
+                      <div class="inner">
+                        <div>
+                          <p class="title">《守望的魚》</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="box">
+                    <a href="books/book9.php"><img src="images/book9.png" class="image1"></a>
+                      <div class="inner">
+                        <div>
+                          <p class="title">《自然禱告者》</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="box">
+                    <a href="books/book10.php"><img src="images/book10.png" class="image1"></a>
+                      <div class="inner">
+                        <div>
+                          <p class="title">《久久酒一次》</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="box">
+                    <a href="books/book11.php"><img src="images/book11.png" class="image1"></a>
+                      <div class="inner">
+                        <div>
+                          <p class="title">《田園之秋》</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="box">
+                    <a href="books/book12.php"><img src="images/book12.png" class="image1"></a>
+                      <div class="inner">
+                        <div>
+                          <p class="title">《濱海茅屋札記》</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="box">
+                    <a href="books/book13.php"><img src="images/book13.png" class="image1"></a>
+                      <div class="inner">
+                        <div>
+                          <p class="title">《森林家屋》</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="box">
+                    <a href="books/book14.php"><img src="images/book14.png" class="image1"></a>
+                      <div class="inner">
+                        <div>
+                          <p class="title">《永遠的山》</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="box">
+                    <a href="books/book15.php"><img src="images/book15.png" class="image1"></a>
+                      <div class="inner">
+                        <div>
+                          <p class="title">《我聽見群山報戰功》</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="box">
+                    <a href="books/book16.php"><img src="images/book16.png" class="image1"></a>
+                      <div class="inner">
+                        <div>
+                          <p class="title">《獵人們》</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="box">
+                    <a href="books/book17.php"><img src="images/book17.png" class="image1"></a>
+                      <div class="inner">
+                        <div>
+                          <p class="title">《荒野天堂》</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="box">
+                    <a href="books/book18.php"><img src="images/book18.png" class="image1"></a>
+                      <div class="inner">
+                        <div>
+                          <p class="title">《鷹兒要回家》</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="box">
+                    <a href="books/book19.php"><img src="images/book19.png" class="image1"></a>
+                      <div class="inner">
+                        <div>
+                          <p class="title">《自然旅情》</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="box">
+                    <a href="books/book20.php"><img src="images/book20.png" class="image1"></a>
+                      <div class="inner">
+                        <div>
+                          <p class="title">《臺灣自然寫作選》</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="box">
+                    <a href="books/book21.php"><img src="images/book21.png" class="image1"></a>
+                      <div class="inner">
+                        <div>
+                          <p class="title">《人與自然的對決》</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="box">
+                    <a href="books/book22.php"><img src="images/book22.png" class="image1"></a>
+                      <div class="inner">
+                        <div>
+                          <p class="title">《搶救寂靜》</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="box">
+                    <a href="books/book23.php"><img src="images/book23.png" class="image1"></a>
+                      <div class="inner">
+                        <div>
+                          <p class="title">《鯨生鯨世》</p>
+                        </div>
+                      </div>
+                  </div>
+                </div>
     </div>
 </body>
-<!-- <script src="js/jquery-2.1.1.min.js"></script> -->
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/jquery.heightLine.js"></script>
 <script>
-/*menu*/
+  /*card*/
+  $(function(){
+    var column = 2,
+        roop = Math.ceil($(".card .box").length / column),
+        i;
+    for(i = 0;i < roop;i++){
+      $(".js-heightLine-" + (i+1)).heightLine();
+    }
+  });
+
+  /*menu*/
   $("#showmenu").click(function (e) { //點擊選單按鈕時
       e.preventDefault(); //停止
       $("#menu").toggleClass("show"); //在#menu增加Class

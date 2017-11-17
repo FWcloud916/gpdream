@@ -5,7 +5,7 @@
     }
     header("Content-Type: text/html; charset=utf-8");
     require_once("connMysql.php");
-    $_POST['position'] = "臺灣適不適合?";
+    $_POST['position'] = "臺灣適不適核?";
     $_POST['voteTable'] = "nucler";
     include_once("locaction.php");
 ?>

@@ -45,6 +45,7 @@
           </ul>
       </li>
       <li><a href="feedback.php"><i class="fa fa-info-circle"></i>意見回饋</a></li>
+      <li><a href="about.php"><i class="fa fa-users"></i>聯絡資訊</a></li>
   </ul>
 
     <a href="#" id="showmenu"> <i class="fa fa-bars fa-1x"></i> </a> <!--選單按鈕-->
