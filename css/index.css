@@ -1,13 +1,25 @@
 @charset "UTF-8";
 
 @media screen and (max-width:480px) {
-  body {
-    background: url(../images/BG1.jpg);
-    font-family: Microsoft JhengHei;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
-    background-size: cover;
-  }
+  img.bg {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 100%;
+
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+   }
+   #page-wrap {
+     position: relative;
+     width: 100%;
+     margin-bottom: 30%;
+   }
   #mid-conent{
     text-align:center;width:60%;margin:0 auto;position: relative;
   }
@@ -25,7 +37,7 @@
     display: none;
     position: absolute;
     left: 50%;
-    bottom: -1vh;
+    bottom: -1vw;
     margin-left: -11vw;
   }
   .circle-nav li {

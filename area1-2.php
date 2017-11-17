@@ -5,7 +5,7 @@
     }
     header("Content-Type: text/html; charset=utf-8");
     require_once("connMysql.php");
-    $_POST['position'] = "台灣快變垃圾島?";
+    $_POST['position'] = "臺灣快變垃圾島?";
     $_POST['voteTable'] = "trash";
     include_once("locaction.php");
 ?>
@@ -15,89 +15,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, minimal-ui initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <title>台灣快變垃圾島?</title>
+  <title>臺灣快變垃圾島?</title>
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/dropmenu.css">
   <link rel="stylesheet" href="css/area1-1.css">
 </head>
 <body>
-    <div>
-                <nav id="menu" class="left">
-                <ul>
-                  <li><a href="index.php"><i class="fa fa-hoff-canvas Sime"></i>首頁</a></li>
+    <img src="images/BG1.jpg" class="bg">
+    <div id="page-wrap">
+              <nav id="menu" class="left">
+                  <ul>
+                    <li><a href="index.php"><i class="fa fa-hoff-canvas Sime"></i>首頁</a></li>
 
-                  <li>
-                      <a href="#"><i class="fa fa-laptop"></i>展區介紹<i class="fa fa-caret-down"></i></a>
-                      <ul>
-                          <li><a href="area1.php">我們只有一個地球</a></li>
-                          <li><a href="area2-1.php">尋找x點</a></li>
-                          <li><a href="area3.php">書寫自然</a></li>
-                          <li><a href="area4.php">行動歌詩</a></li>
-                          <li>
-                <a href="#"><i class="fa fa-tree"></i>綠色行動<i class="fa fa-caret-down"></i></a>
-                <ul>
-                  <li><a href="message.php">綠色行動</a></li>
-                  <li><a href="message_show.php">綠色樹</a></li>
-                </ul>
-              </li>
-                      </ul>
-                  </li>
-                  <li><a href="feedback.php"><i class="fa fa-info-circle"></i>意見回饋</a></li>
-              </ul>
+                    <li>
+                        <a href="#"><i class="fa fa-laptop"></i>展區介紹<i class="fa fa-caret-down"></i></a>
+                        <ul>
+                            <li><a href="area1.php">我們只有一個地球</a></li>
+                            <li><a href="area2.php">尋找X點</a></li>
+                            <li><a href="area3.php">書寫自然</a></li>
+                            <li><a href="#"><i class="fa fa-tree"></i>綠色行動<i class="fa fa-caret-down"></i></a>
+				                <ul>
+				                  <li><a href="message.php">綠色行動</a></li>
+				                  <li><a href="message_show.php">綠色樹</a></li>
+				                </ul>
+							</li>
+                        </ul>
+                    </li>
+                    <li><a href="feedback.php"><i class="fa fa-info-circle"></i>意見回饋</a></li>
+                    <li><a href="about.php"><i class="fa fa-users"></i>聯絡資訊</a></li>
+                   </ul>
 
-                <a href="#" id="showmenu"> <i class="fa fa-bars fa-1x"></i> </a> <!--選單按鈕-->
+                  <a href="#" id="showmenu"> <i class="fa fa-bars fa-1x"></i> </a> <!--選單按鈕-->
               </nav>
 
-                <div id="header">
-                  <h1 style="margin-bottom:0;">台灣</h1>
-                  <h1 style="margin-top:0;">快變垃圾島?</h1>
-                </div>
-             </div>
+
+              <div id="header">
+                <h1 style="margin-bottom:0;">臺灣</h1>
+                <h1 style="margin-top:0;">快變垃圾島?</h1>
+              </div>
               <div class="slideshow-container">
                   <div class="mySlides fade">
-                    <div class="numbertext">1 / 4</div>
-                    <img src="images/banner_unclear-01.jpg" style="width:100%">
-                  </div>
-
-                  <div class="mySlides fade">
-                    <div class="numbertext">2 / 4</div>
                     <img src="images/banner_trash-02.jpg" style="width:100%">
                   </div>
-
-                  <div class="mySlides fade">
-                    <div class="numbertext">3 / 4</div>
-                    <img src="images/banner_light-03.jpg" style="width:100%">
-                  </div>
-
-                  <div class="mySlides fade">
-                    <div class="numbertext">4 / 4</div>
-                    <img src="images/banner_air-04.jpg" style="width:100%">
-                  </div>
-
                 </div>
                 <br>
-                <div style="text-align:center;margin-bottom:5vh;">
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
+                <div id="vs-head">
+                  <h1>臺灣v.s.垃圾</h1>
                 </div>
-
-                <div style="border:1vw solid #000000;width:60vw;margin:0 auto;text-align:center;">
-                  <h1 style="margin:0;">台灣v.s.垃圾</h1>
-                </div>
-                <div style="width:100%;margin:0 auto;text-align:center;">
-                  <p style="font-size:6vw;letter-spacing:1.5vw;">您認為台灣的垃圾多嗎?</p>
-                </div>
-                <div style="width:100%;margin:0 auto;text-align:center;">
-                  <button name="much" value="多" id="much" onclick="vote(1)" style="width:40vw;height:12vh;border:none;border-radius:3vw;background-color:#59F4F4;font-size:7vw;font-family:Microsoft JhengHei;margin:0 auto;">多</button>
-                  <button name="less" value="不多" id="less" onclick="vote(0)" style="width:40vw;height:12vh;border:none;border-radius:3vw;background-color:#FDF54D;font-size:7vw;font-family:Microsoft JhengHei;margin:0 auto;">不多</button>
+                <div id="question">
+                  <p>您認為臺灣垃圾多不多?</p>
+                  <button type="button" name="much" value="多" id="much" onclick="vote(1)" style="background-color:#59F4F4;">多</button>
+                  <button type="button" name="less" value="不多" id="less" onclick="vote(0)" style="background-color:#FDF54D;">不多</button>
                   <form id="form1" method="post" action="area1_vote.php">
                     <input type="hidden" name="vote" value="" id="vote">
                     <input type="hidden" name="position" value="<?php if(isset($_POST['position'])){ echo $_POST['position']; }?>" id="position">
                     <input type="hidden" name="voteTable" value="<?php if(isset($_POST['voteTable'])){ echo $_POST['voteTable']; }?>" id="voteTable">
                     <input type="hidden" name="isqrcode" value="<?php if(isset($_GET['come'])){ echo $_GET['come']; }else{echo "0";}?>" id="isqrcode">
-                  </form>
+                  </form
                 </div>
         </div>
 </body>
